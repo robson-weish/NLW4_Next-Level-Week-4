@@ -1,0 +1,26 @@
+FORMA PADRÃO DE UM CONTEXT USADO NA ROCKETSEAT 
+USAMOS NESSE NLW ESTA FORMA
+
+TEM QUE ALTERAR SOMENTE ALGUNS NOMES MAS ESTA E A ESTRUTURA
+
+
+import { createContext, ReactNode } from "react";
+
+interface CountdownContextData {
+
+}
+
+interface CountdownContextProps {
+    children: ReactNode;
+}
+
+const CountdownContext = createContext ({} as CountdownContextData)
+
+export function CountdownProvider( { children }: CountdownContextProps ) {
+
+    return (
+        <CountdownContext.Provider value={{}}>
+            {children}
+        </CountdownContext.Provider>
+    )
+}
